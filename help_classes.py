@@ -12,17 +12,17 @@ pos_array = [75, 225, 375, 525]
 
 class GameObject(pygame.sprite.Sprite):
     def __init__(self):
-            pygame.sprite.Sprite.__init__(self)
-            width, height = 100, 100
+        pygame.sprite.Sprite.__init__(self)
+        width, height = 100, 100
 
-            self.level = 1
-            self.colour = colour_list[self.level-1]
-            self.image = pygame.Surface([width, height])
-            self.image.fill(self.colour)
-            self.rect = self.image.get_rect()
-            self.y = pos_array[random.randint(0, 3)]
-            self.x = pos_array[random.randint(0, 3)]
-            self.rect.center = (self.x, self.y)
+        self.level = 1
+        self.colour = colour_list[self.level-1]
+        self.image = pygame.Surface([width, height])
+        self.image.fill(self.colour)
+        self.rect = self.image.get_rect()
+        self.y = pos_array[random.randint(0, 3)]
+        self.x = pos_array[random.randint(0, 3)]
+        self.rect.center = (self.x, self.y)
 
     def move(self, dir):
         ny = self.y 
@@ -46,4 +46,3 @@ class GameObject(pygame.sprite.Sprite):
             self.level += 1
         self.colour = colour_list[self.level-1]
         self.image.fill(self.colour)
-            
