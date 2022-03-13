@@ -1,6 +1,8 @@
 import pygame
 import sys
 import numpy
+from help_classes import GameObject
+import time
 
 
 pygame.init()
@@ -18,12 +20,17 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 screen.fill(BG_COLOUR)
 
 board = numpy.zeros((WIDTH, HEIGHT))
+# //150 translates other direction:
 pos_array = [75, 225, 375, 525]
 
-x = 450
-y = 450
 
-objects = [[3, 3]]
+clock = pygame.time.Clock()
+
+fps = 60
+
+rectangles = pygame.sprite.Group()
+for _ in range(2):
+    rectangles.add(GameObject())
 
 
 def draw_lines():
@@ -38,53 +45,28 @@ def draw_lines():
 draw_lines()
 
 
-def change_position(x1, y1):
-    pygame.draw.circle(screen, FIRST_COLOUR, (pos_array[x1], pos_array[y1]), 50)
-
-
-def okay_to_move(co):
-    if co == -1 or co == 4:
-        return False
-    return True
-
-
-def move(dir):
-    screen.fill(BG_COLOUR)
-    draw_lines()
-    for object in objects:
-        if dir == "UP":
-            if okay_to_move(object[1]-1):
-                object[1] -= 1
-        elif dir == "DOWN":
-            if okay_to_move(object[1] + 1):
-                object[1] += 1
-        elif dir == "LEFT":
-            if okay_to_move(object[0] - 1):
-                object[0] -= 1
-        elif dir == "RIGHT":
-            if okay_to_move(object[0] + 1):
-                object[0] += 1
-        else:
-            print("Something went wrong")
-
-        change_position(object[0], object[1])
-
-
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
         if event.type == pygame.KEYDOWN:
+            dir = "NULL"
             if event.key == pygame.K_UP:
-                move("UP")
+                dir = "UP"
             elif event.key == pygame.K_DOWN:
-                move("DOWN")
+                dir = "DOWN"
             elif event.key == pygame.K_LEFT:
-                move("LEFT")
+                dir = "LEFT"
             elif event.key == pygame.K_RIGHT:
-                move("RIGHT")
+                dir = "RIGHT"
+            for obj in rectangles:
+                obj.move(dir)
 
-
+    screen.fill(BG_COLOUR)
+    draw_lines()
+    rectangles.draw(screen)
+    pygame.display.update()
+    clock.tick(fps)
 
 
 
