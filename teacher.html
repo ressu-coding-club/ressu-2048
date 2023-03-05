@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Oispa Ari </title>
+    <link rel="stylesheet" href="teacher.css" />
+    <script type="text/javascript" src="teacher.js" defer></script>
+</head>
+
+<body>
+    <p id="description"> Connect teachers to achieve Ari H!</p>
+    <div class="cover"></div>
+    <div class="container">
+
+
+        <div class="logo" id="name">Oispa Ari</div>
+        <div class="scoreBar">
+            <label id="scorenow" style="position: relative; top:-13px;">score:</label>
+            <label id="score"> 0</label>
+            <div id="addScore"></div>
+        </div>
+        <div id="stage"></div>
+        <!--<div id="gameOver hide">-->
+        <!--<div class="overText">GameOver!</div>-->
+        <!--</div>-->
+    </div>
+
+    <button id="eng" onclick="toggleLanguage('English')">English</button>
+    <button id="fin" onclick="toggleLanguage('Finnish')">Finnish</button>
+    <button id="butt" onclick="gameObj.studyBreak()">Vacation!</button>
+
+    <div id="action"></div>
+    <div id="action2"></div>
+    <p id="warning">Warning! The game may contain flashy lights!</p>
+    
+</body>
+
+</html>
