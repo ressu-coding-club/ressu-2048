@@ -26,7 +26,7 @@ body{
 }
  .container{
      margin:auto;
-     width: 452px;
+     width: 28.25rem;
      height: 100%;
      overflow: hidden;
      position: relative;
@@ -47,33 +47,33 @@ body{
      background: rgb(199, 156, 26);
      color: black;
 
-     padding:10px;
+     padding:0.625rem;
      position: relative;
-     margin-top:10px;
+     margin-top:0.625rem;
  }
 
 .scoreBar:before{
     content: "";
     display: block;
-    border-width: 20px;
+    border-width: 1.25rem;
     border-color: transparent rgb(199, 156, 26) transparent transparent ;
     border-style: solid;
     position: absolute;
     top:50%;
-    left:-40px;
-    margin-top:-20px;
+    left:-2.5rem;
+    margin-top:-1.25rem;
 }
  #score{
-     font-size: 50px;
+     font-size: 3.125rem;
  }
  
  #addScore{
      position: absolute;
-     bottom: 0px;
-     font-size: 30px;
+     bottom: 0rem;
+     font-size: 1.875rem;
      color: white;
      opacity: .8;
-     top:4px;
+     top:0.25rem;
      right: 0;
  }
 
@@ -94,12 +94,12 @@ body{
     -khtml-user-select: none;
     user-select: none;
     position: absolute;
-    width: 450px;
-    height: 450px;
+    width: 28.125rem;
+    height: 28.125rem;
     top:50%;
     left:0;
-    margin-top: -200px;
-    border: 1px solid rgb(199, 156, 26);
+    margin-top: -12.5rem;
+    border: 0.063rem solid rgb(199, 156, 26);
     z-index: 1;
 }
 
@@ -118,49 +118,49 @@ body{
 }
 
 .row0{
-    top:10px;
+    top:0.625rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 .row1{
-    top:120px;
+    top:7.5rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 .row2{
-    top:230px;
+    top:14.375rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 .row3{
-    top:340px;
+    top:21.25rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
 .cell0{
-    left:10px;
+    left:0.625rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 .cell1{
-    left:120px;
+    left:7.5rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 .cell2{
-    left:230px;
+    left:14.375rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 .cell3{
-    left:340px;
+    left:21.25rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
 img{
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     position: absolute;
     text-align: center;
-    line-height: 100px;
+    line-height: 6.25rem;
     cursor: pointer;
     background: #fff;
-    font-size: 43px;
+    font-size: 2.688rem;
     -moz-user-select: none;
     -khtml-user-select: none;
     user-select: none;
@@ -195,7 +195,7 @@ div{
 .num16{
     background:rgb(199, 156, 26);
     color:#fff;
-    font-size: 80px;
+    font-size: 5rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease; 
     animation: myfirst .5s;
 }
@@ -203,64 +203,57 @@ div{
 .num32{
     background:rgb(199, 156, 26);
     color: #fdfdfd;
-    font-size: 80px;
+    font-size: 5rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
 .num64{
     background: rgb(199, 156, 26);
     color:#fff;
-    font-size: 80px;
+    font-size: 5rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
 .num128{
     background:rgb(199, 156, 26);
     color: #f94e2f;
-    font-size: 52px;
+    font-size: 3.25rem;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
 .num256{
     background: rgb(199, 156, 26);
     color:#ffcc66;
-    font-size: 52px;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
 .num512{
     background: rgb(199, 156, 26);
     color: #FB4E4E;
-    font-size: 52px;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
 .num1024{
     background: rgb(199, 156, 26);
     color: #f6f7ff;
-    font-size: 52px;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
 .num2048{
     background: rgb(199, 156, 26);
     color: #fff300;
-    font-size: 52px;
-
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
 .num4096{
     background: rgb(199, 156, 26);
     color: #fff;
-    font-size: 52px;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
 .num8192{
     background: rgb(199, 156, 26);
     color: rgb(199, 156, 26);
-    font-size: 52px;
     transition:all .2s ease;   -ms-transition:all .2s ease; -moz-transition:all .2s ease; -o-transition:all .2s ease; -webkit-transition:all .2s ease;
 }
 
@@ -291,8 +284,8 @@ div{
     animation-duration: 3s;
     animation-name: slidedown;
     animation-fill-mode: forwards;
-    height: 100px;
-    width: 100px;
+    height: 6.25rem;
+    width: 6.25rem;
     top: 0;
     z-index: 100;
     background: none;
@@ -309,8 +302,8 @@ div{
     animation-duration: 5s;
     animation-name: slidedown;
     animation-fill-mode: forwards;
-    height: 100px;
-    width: 100px;
+    height: 6.25rem;
+    width: 6.25rem;
     top: 0;
     z-index: 100;
     background: none;

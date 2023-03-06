@@ -2,7 +2,7 @@ let image_sources = [
     "images/LAHU.jpg",
     "images/tiia.jpg",
     "images/kevin.JPG",
-    "images/elias2.jpeg",
+    "images/kapu.jpg",
     "images/shampa.jpg",
     "images/JUHA.jpg",
     "images/hefo.jpg",
@@ -48,10 +48,7 @@ var gameObj = {
         }
         return emptyList;
     },
-    newBox: function () {
-        var _this = this;
-        
-        
+    newBox: function () {    
         var box = function (obj) {
             var num = Math.random() > 0.9 ? 4 : 2;
             this.value = num;
@@ -124,21 +121,21 @@ var gameObj = {
         scoreBar.innerText=this.points.score;
         scoreBar.textContent=this.points.score;
 
-        if(ind == 9 && this.used == 0){
-             approachingImage();
+        let len = image_sources.length;
+        if(ind == len - 3 && this.used == 0){
             this.used = 1
             appendImage("images/snoopy.png", 1);
             let audio = new Audio("sounds/villiressu.mp3");
             audio.play();
             setTimeout(function(){5;}, 10000);
         }
-        if(ind == 10 && this.used == 1){
+        if(ind == len - 2 && this.used == 1){
             this.used = 2
             let audio = new Audio("sounds/bach.mp3")
             audio.play();
             setTimeout(function(){5;}, 10000);
         }
-        if(ind == 11 && this.used == 2){
+        if(ind == len - 1 && this.used == 2){
             this.used = 3;
             let audio = new Audio("sounds/ressut_on_ikuisia.mp3");
             audio.play();
@@ -221,13 +218,16 @@ var gameObj = {
                 addscore.className="hide";
             },500);
         }
-        if(can){
+        if(can==1){
             this.newBox();
         }
         if(this.isEnd()){
+            this.newBox();
             this.gameOver();
         }
     },
+
+    inti: null,
 
     studyBreak: function(){
         
@@ -243,7 +243,6 @@ var gameObj = {
         for(var i=0;i<4;i++){
             for(var j=0;j<4;j++){
                 var obj=this.stage[i][j];
-                console.log("moi");
                 if(obj && obj.boxObj && obj.boxObj.value <= 4){
                     obj.boxObj.domObj.parentNode.removeChild(obj.boxObj.domObj);
                     obj.boxObj = null;
@@ -251,8 +250,6 @@ var gameObj = {
             }
         }
     },
-
-    inti: null
 }
 
 
@@ -348,7 +345,6 @@ window.onload = function () {
 
 function toggleLanguage(lang){
 
-    console.log('moi');
     let description = document.getElementById("description");
     let score = document.getElementById("scorenow");
     let butt = document.getElementById("butt");
